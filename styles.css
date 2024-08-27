@@ -137,6 +137,7 @@ h1 {
   border: 1px solid var(--secondary-color);
   border-radius: 8px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  color: var(--text-color);
 }
 
 .dropdown-menu span {
@@ -548,4 +549,24 @@ body.dark-mode {
   #theme-toggle {
     margin-right: 0;
   }
+}
+
+.dropdown-menu {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+body.dark-mode .dropdown-menu {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+}
+
+.dropdown-toggle {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+}
+
+body.dark-mode .dropdown-toggle {
+  background-color: var(--primary-color);
+  color: var(--bg-color);
 }
