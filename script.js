@@ -221,18 +221,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.key === 'Enter') addTask();
   });
 
-  // Remove this event listener as it's redundant
-  // elements.themeToggle.addEventListener('click', () => {
-  //   document.body.classList.toggle('dark-mode');
-  //   const icon = elements.themeToggle.querySelector('i');
-  //   icon.classList.toggle('fa-moon');
-  //   icon.classList.toggle('fa-sun');
-  // });
-
   // Update the toggleTheme function
   const toggleTheme = () => {
     document.body.classList.toggle('dark-mode');
-    const icon = elements.themeToggle.querySelector('i');
+    const icon = elements.themeToggle.querySelector('svg');
     icon.classList.toggle('fa-moon');
     icon.classList.toggle('fa-sun');
 
