@@ -97,13 +97,8 @@ h1 {
 
 .filter-sort-section {
   display: flex;
-  justify-content: space-between;
+  gap: 10px;
   margin-bottom: 2rem;
-}
-
-.custom-dropdown {
-  position: relative;
-  display: inline-block;
 }
 
 .dropdown-toggle {
@@ -269,7 +264,11 @@ body.dark-mode {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 0.5rem;
+    border-radius: 10px;
+    padding: 10px;
     margin-top: 1rem;
+    /* background: #eee; */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
 
   h1 {
@@ -283,7 +282,6 @@ body.dark-mode {
   }
 
   #task-input {
-    width: 100%;
     border-radius: 8px 8px 0 0;
     margin-bottom: 0;
   }
@@ -296,12 +294,6 @@ body.dark-mode {
 
   .filter-sort-section {
     flex-direction: row;
-    justify-content: space-between;
-    gap: 0.5rem;
-  }
-
-  .custom-dropdown {
-    width: 48%;
   }
 
   #profile-button,
