@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>To-Do List</h1>
+        <div>
+          <button id="profile-button">
+            <i class="fas fa-user"></i> Profiles
+          </button>
+          <button id="favorites-button">
+            <i class="fas fa-star"></i> Favorites
+          </button>
+          <button id="return-to-list" style="display: none">
+            <i class="fas fa-list"></i> Return to List
+          </button>
+          <button id="clear-all">
+            <i class="fas fa-trash-alt"></i> Clear All
+          </button>
+          <button id="theme-toggle" aria-label="Toggle dark mode">
+            <i class="fas fa-adjust"></i>
+          </button>
+        </div>
+      </header>
+      <div class="input-section">
+        <input type="text" id="task-input" placeholder="Add a new task..." />
+        <button id="add-task"><i class="fas fa-plus"></i> Add</button>
+      </div>
+      <div class="filter-sort-section">
+        <div class="custom-dropdown" id="filter-dropdown">
+          <button class="dropdown-toggle">
+            <i class="fas fa-filter"></i> Filter
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="dropdown-menu">
+            <span data-value="all"><i class="fas fa-tasks"></i> All</span>
+            <span data-value="active"><i class="fas fa-clock"></i> Active</span>
+            <span data-value="completed"
+              ><i class="fas fa-check"></i> Completed</span
+            >
+          </div>
+        </div>
+        <div class="custom-dropdown" id="sort-dropdown">
+          <button class="dropdown-toggle">
+            <i class="fas fa-sort"></i> Sort <i class="fas fa-chevron-down"></i>
+          </button>
+          <ul class="dropdown-menu">
+            <span data-value="default"
+              ><i class="fas fa-sort-numeric-down"></i> Default</span
+            >
+            <span data-value="alphabetical"
+              ><i class="fas fa-sort-alpha-down"></i> Alphabetical</span
+            >
+            <span data-value="date"
+              ><i class="fas fa-calendar-alt"></i> Date Added</span
+            >
+          </ul>
+        </div>
+      </div>
+      <ul id="task-list"></ul>
+      <div id="profile-modal" class="modal">
+        <div class="modal-content">
+          <h2>Profiles</h2>
+          <div id="profile-list"></div>
+          <input
+            type="text"
+            id="new-profile-name"
+            placeholder="New profile name"
+          />
+          <input
+            type="password"
+            id="new-profile-password"
+            placeholder="Password"
+          />
+          <button id="create-profile">Create Profile</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
