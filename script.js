@@ -161,7 +161,15 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   const switchProfile = (profile) => {
+    if (profile === 'default') {
+      currentProfile = profile;
+      applyFilterAndSort();
+      elements.profileModal.style.display = 'none';
+      return;
+    }
+
     const password = prompt('Enter password for ' + profile);
+
     if (password === profiles[profile].password) {
       currentProfile = profile;
       applyFilterAndSort();
